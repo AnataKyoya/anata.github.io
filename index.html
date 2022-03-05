@@ -11,176 +11,116 @@
 </head>
 
 <body>
-    <section class="content">
-        <button class="btnKirim" onclick="af()">kirim feedback</button>
-        <button class="btnShowFeed" onclick="sH()">lihat feedback</button>
-        <div class="wallpaper">
-            <div class="contentGate" id="p1">
-                <div id="cG">
+    <div class="btn-feed desktop-tablet">
+        <button class="btnFeed send" onclick="send()">kirim komentar</button>
+        <button class="btnFeed show" onclick="show()">tampilkan komentar</button>
+    </div>
+    <div class="kalenderJam">
+        <div class="jam">
+            <span class="hours">00</span>
+            <span class="colon">:</span>
+            <span class="menit">00</span>
+        </div>
+        <div class="kalender">
+            <span class="hari">senin</span>
+            <span class="pembatas">/</span>
+            <span class="tanggal-hari">00</span>
+            <span class="pembatas">/</span>
+            <span class="tanggal-bulan">00</span>
+            <span class="pembatas">/</span>
+            <span class="tanggal-tahun">0000</span>
+        </div>
+        <div class="btn-feed mobile">
+            <button class="btnFeed send" onclick="send()">kirim komentar</button>
+            <button class="btnFeed show" onclick="show()">tampilkan komentar</button>
+        </div>
+    </div>
+    <div class="contentGate">
+        <div id="cG">
 
-                </div>
-                <div class="showFeed sFhide">
-                    <i class='bx bx-x' onclick="csf()"></i>
-                    <div class="feedOrg">
-                        <div class="cardFeed">
-                            <h3 id="namaOrg">Nama</h3>
-                            <div class="komenOrg">
-                                <p id="komenOrg">Komen</p>
-                            </div>
-                            <p id="survOrg" class="survOrg hideSurv">Survey</p>
-                            <h4 class="showMore more" onclick="showSurv()">Lebih banyak</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="feedback1 fHide" id="fid">
-                    <div class="isiNama">
-                        <h2>tulis nama anda</h2>
-                        <p>*Disarankan nama samaran</p>
-                        <input type="text" name="nama" id="nama" class="namaIsi" placeholder="(Namamu)">
-                        <p id="noName"></p>
-                        <button class="btnFeed" onclick="mulai()">mulai</button>
-                        <button class="btnFeed" onclick="cencel()">cencel</button>
-                    </div>
-                    <div class="pg1 pgHide1">
-                        <h2 id="pertanyaanPer1">apa yang kamu sukai dari website ini?</h2>
-                        <ul>
-                            <li onclick="nextpg1l1()">
-                                <h3 id="jawab">tampilan modern</h3>
-                            </li>
-                            <li onclick="nextpg1l2()">
-                                <h3 id="jawab">sangat bermanfaat</h3>
-                            </li>
-                            <li onclick="nextpg1l3()">
-                                <h3 id="jawab">tampilan simpel</h3>
-                            </li>
-                            <li onclick="nextpg1l4()">
-                                <h3 id="jawab">tidak ada</h3>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pg2 pgHide2">
-                        <h2 id="pertanyaanPer2">apa kamu merasa bosan?</h2>
-                        <ul>
-                            <li onclick="nextpg2l1()">
-                                <h3 id="jawab">tidak</h3>
-                            </li>
-                            <li onclick="nextpg2l2()">
-                                <h3 id="jawab">tidak terlalu</h3>
-                            </li>
-                            <li onclick="nextpg2l3()">
-                                <h3 id="jawab">iya</h3>
-                            </li>
-                            <li onclick="nextpg2l4()">
-                                <h3 id="jawab">sangat bosan</h3>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pg3 pgHide3" id="pg3">
-                        <h2 id="pertanyaanPer2">apa kamu menyukai koleksi saya?</h2>
-                        <ul>
-                            <li onclick="nextpg3l1()">
-                                <h3 id="jawab">iya</h3>
-                            </li>
-                            <li onclick="nextpg3l2()">
-                                <h3 id="jawab">tidak</h3>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nilai nHide">
-                        <h2>beri nilai website ini</h2>
-                        <div class="rateIn">
-                            <h3 class="from10">/10</h3>
-                            <input type="number" name="nilai" id="nilaiWeb" class="rateNi" placeholder="Nilai">
-                        </div>
-                        <p id="maxNum"></p>
-                        <textarea type="text" name="komen" id="komen" class="komen" placeholder="Komen"></textarea>
-                        <button class="btnFeed" onclick="kirim()">kirim</button>
-                    </div>
-                </div>
-                <h2 id="f1"></h2>
-            </div>
-            <div class="cp2" id="cp2">
-                <div id="FNH">
-                    <div class="fotoProfile">
-                        <img src="/logoProfile.jpg" alt="">
-                        <div class="namaHoby" id="nH">
-                            <h2 class="nama">aldo natanael sihaloho</h2>
-                            <p class="hoby">playing game, coding, design, playing football</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <h2 id="f1"></h2>
 
-            <div class="cc2" id="cc2">
-                <div id="CF" class="collec">
-                    <h2>my collection</h2>
-                    <div id="myBtnContainer" class="kategori">
-                        <h2 class="list active" onclick="filterSelection('all')">all</h2>
-                        <h2 class="list" onclick="filterSelection('logo')">logo design</h2>
-                        <h2 class="list" onclick="filterSelection('web')">web design</h2>
-                    </div>
-                    <div class="underlineWhite"></div>
-                    <div class="collecFoto">
-                        <div class="filterDiv logo">
-                            <img src="/mount-fuji-shaved-ice.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="send-feedback hide">
+            <h2>komentar anda</h2>
+            <form action="" method="post" class="form">
+                <input type="text" id="nama" name="nama" placeholder="Tulis Nama" class="nama">
+                <input type="number" id="nilai" name="nilai" placeholder="Beri Nilai 1-10" class="nilai">
+                <textarea name="komentar" id="komentar" placeholder="Beri Komentar" class="komentar"></textarea>
 
-            <div class="kalenderTime">
-                <div class="time">
-                    <div class="time-text">
-                        <span class="num hour-num">00</span>
-                    </div>
-                    <span class="colon">:</span>
-                    <div class="time-text">
-                        <span class="num hour-min">00</span>
-                    </div>
-                </div>
-                <div class="kalender">
-                    <span class="day day-hari">senin.</span>
-                    <span class="tanggal tanggal-hari">00</span>
-                    <span class="pembatas">/</span>
-                    <span class="tanggal tanggal-bulan">00</span>
-                    <span class="pembatas">/</span>
-                    <span class="tanggal tanggal-tahun">00</span>
+                <button type="submit" class="btnFeed" onclick="kirim()">kirim</button>
+            </form>
+            <button class="btnFeed cencel" onclick="cencel()">cencel</button>
+        </div>
+
+        <div class="show-feed hide">
+            <i class='bx bx-x' onclick="closefeed()"></i>
+            <div class="org-feed">
+                <div class="card-feed">
+                    <h2>nama</h2>
+                    <h3>nilai</h3>
+                    <p>komen</p>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="cp" id="cp">
+        <div id="profil" class="content-profil">
+            <img src="logoProfile.jpg" alt="">
+            <div class="namaHoby">
+                <h3>aldo natanael sihaloho</h3>
+                <p>main game, program, design, sepak bola</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ck" id="ck">
+        <div id="koleksi" class="content-koleksi">
+            <h2>koleksi ku</h2>
+            <div id="btnList" class="kategori">
+                <h3 class="list active" onclick="filterSelection('all')">all</h3>
+                <h3 class="list" onclick="filterSelection('logo')">logo</h3>
+                <h3 class="list" onclick="filterSelection('web')">web</h3>
+            </div>
+            <div class="line"></div>
+            <div class="foto">
+                <div class="filterDiv logo">
+                    <img src="mount-fuji-shaved-ice.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainGate">
         <div class="gate">
-            <div class="icon">
-                <div class="btn dayNight">
-                    <i class='bx bxs-moon'></i>
-                    <i class='bx bxs-sun'></i>
-                    <div class="btnText">
-                        <h2>dark mode</h2>
-                        <h2>light mode</h2>
-                    </div>
+            <div class="btn dayNight">
+                <i class='bx bxs-moon'></i>
+                <i class='bx bxs-sun'></i>
+                <div class="btnText">
+                    <h3>mode gelap</h3>
+                    <h3>mode terang</h3>
                 </div>
             </div>
-            <div class="icon">
-                <div class="btn collection">
-                    <i class='bx bxs-book-open'></i>
-                    <div class="btnText">
-                        <h2>collection</h2>
-                    </div>
+            <div class="btn koleksi">
+                <i class='bx bxs-bookmarks'></i>
+                <div class="btnText">
+                    <h3>koleksi</h3>
                 </div>
             </div>
-            <div class="icon">
-                <div class="btn profile">
-                    <img src="/logoProfile.jpg" class="btnFoto">
-                    <div class="btnText">
-                        <h2>profile</h2>
-                    </div>
+            <div class="btn profil">
+                <i class='bx bxs-user-circle'></i>
+                <div class="btnText">
+                    <h3>profil</h3>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
 </body>
-<script src="/kalenderTime.js"></script>
-<script src="/gate.js"></script>
-<script src="/collection.js"></script>
-<script src="/feedback.js"></script>
+<script src="gate.js"></script>
+<script src="kalenderTime.js"></script>
+<script src="collection.js"></script>
+<script src="feedback.js"></script>
 
 </html>

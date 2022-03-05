@@ -4,8 +4,8 @@ function filterSelection(c) {
     x = document.getElementsByClassName("filterDiv");
     if (c == "all") c = "";
     for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        w3RemoveClass(x[i], "fill");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "fill");
     }
 }
 
@@ -30,8 +30,7 @@ function w3RemoveClass(element, name) {
     element.className = arr1.join(" ");
 }
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
+var btnList = document.getElementById("btnList");
 var btns = btnContainer.getElementsByClassName("list");
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function(){

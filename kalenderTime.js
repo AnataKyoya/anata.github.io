@@ -1,15 +1,15 @@
 setInterval(() => {
     let date = new Date(),
-        hour = date.getHours(),
-        min = date.getMinutes();
-    console.log(hour),
-        console.log(min);
+    hours = date.getHours(),
+    menit = date.getMinutes();
+    console.log(hours),
+        console.log(menit);
     
-    hour = hour < 10 ? "0" + hour : hour;
-    min = min < 10 ? "0" + min : min;
+    hours = hours < 10 ? "0" + hours : hours;
+    menit = menit < 10 ? "0" + menit : menit;
 
-    document.querySelector(".hour-num").innerText = hour,
-        document.querySelector(".hour-min").innerText = min;
+    document.querySelector(".hours").innerText = hours,
+        document.querySelector(".menit").innerText = menit;
     
 }, 1000);
 
@@ -22,7 +22,7 @@ day[3] = "rabu.";
 day[4] = "kamis.";
 day[5] = "jum'at.";
 day[6] = "sabtu.";
-document.querySelector(".day-hari").innerText = day[date.getDay()];
+document.querySelector(".hari").innerText = day[date.getDay()];
 
 hari = date.getDate();
 hari = hari < 10 ? "0" + hari : hari;
